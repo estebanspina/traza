@@ -1,6 +1,6 @@
 # Trabajo pendiente
 
-Fuente: documento 07. PI01 y PI02 completados como preparación del repositorio y de las expectativas, con evidencia CI enlazada en el informe de avance. PI03 iniciado: lexer, posiciones, diagnósticos y comando tokens. Los casos CF siguen pendientes de ejecución semántica. No se crearon issues, hitos o proyectos remotos automáticamente.
+Fuente: documento 07. PI01 y PI02 completados como preparación del repositorio y de las expectativas, con evidencia CI enlazada en el informe de avance. PI03 cuenta con lexer integrado; PI04 tiene parser inicial para la EBNF. D0 ya dispone de ejecución comprobada y un arnés específico. La batería completa CF sigue pendiente. No se crearon issues, hitos o proyectos remotos automáticamente.
 
 | Paquete | Objetivo | Dependencias | Cierre |
 | --- | --- | --- | --- |
@@ -26,8 +26,9 @@ Fuente: documento 07. PI01 y PI02 completados como preparación del repositorio 
 | PI20 | Entrega y mediciones | PI19 | Reproducción limpia y límites publicados. |
 
 ## Siguiente incremento
-- Completar la integración de PI03 y comenzar PI04 (parser).
-- Implementar resolución PI05 y Number mínimo PI06.
+- Ampliar PI05: aliases, constructores, ámbitos y nombres más allá del subconjunto D0.
+- Completar PI06 y su evaluación numérica; ya hay Number mínimo exacto para D0.
+- Ampliar PI10–PI14 sin confundir parser con soporte de ejecución.
 - Integrar PI07–09 para D0: bounded(50) → Ok(50), bounded(-1) y bounded(101) → Err(ContractViolation); retorno constante inválido → rechazo estático.
 - No habilitar comandos de ejecución que todavía no estén implementados.
 

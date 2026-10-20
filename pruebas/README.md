@@ -1,16 +1,14 @@
-# Pruebas
+# Pruebas de Traza
 
 ```sh
 python herramientas/verificar.py
+python herramientas/probar_d0.py
 ```
 
-## Infraestructura
-Comprueba catálogo completo, rutas, reglas y expectativas de D0. No instala dependencias ni ejecuta programas Traza.
+El primer comando descubre todas las pruebas: infraestructura, catálogo, lexer, parser, comprobación, máquina e interfaz. El segundo ejecuta explícitamente el manifiesto D0 y emite resultados JSON.
 
-## Léxico
-Prueba tokens, UTF-8 inválido, escapes, bytes, rangos, comentarios, máxima longitud e interfaz JSON. Los programas CF se tokenizan para validar su frontera léxica; esto no ejecuta sus expectativas.
+La aceptación léxica no implica aceptación sintáctica; la aceptación sintáctica no implica soporte de ejecución. NI01 significa capacidad no implementada, no aprobación del programa.
 
-## Conformidad
-catalogo.json contiene CF01–CF40 con variantes; documentacion/conformidad/reglas.json contiene 116 reglas. d0.json mantiene el subconjunto de arranque. Todos los estados semánticos permanecen pendientes. La CI de lexer no los modifica.
+El catálogo CF01–CF40 conserva expectativas y metadatos de preparación. Los resultados reales se publican en informes separados; cobertura.json delimita el arnés D0. Aprobar D0 no aprueba automáticamente la batería completa.
 
-Ver el catálogo documentado y ADR 0002 para modalidades, trazabilidad y protocolos pendientes de API externa.
+Las pruebas incluyen exactitud decimal mínima, garantías, precondiciones, rechazo de retornos imposibles, propagación, orden, ramas descartadas, límites externos y pila explícita.

@@ -1,5 +1,9 @@
 # Código del prototipo
 
-traza/analisis implementa la fase léxica inicial con datos inmutables, UTF-8 estricto, posiciones, tokens y diagnósticos. traza/__main__.py ofrece sólo el comando experimental tokens.
+- analisis/: UTF-8, lexer, AST y parser.
+- comprobacion.py: firmas, tipos y obligaciones conservadoras del subconjunto D0.
+- numeros.py: decimal finito exacto mínimo con presupuestos externos.
+- ejecucion.py: máquina de continuaciones, contratos, propagación y serialización.
+- __main__.py: tokens, analizar, verificar y ejecutar.
 
-No hay parser, resolución, tipos, contratos ejecutables ni runtime. Mantener las fronteras del documento 06; no ejecutar texto Traza mediante eval o exec. Crear los demás componentes cuando se implementen.
+No existe todavía un núcleo elaborado completo, efectos, comprobador general ni biblioteca numérica completa. No ejecutar texto Traza mediante eval o exec. Ver documentacion/ejecucion-d0.md para alcance y decisiones.

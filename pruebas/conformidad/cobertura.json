@@ -1,0 +1,18 @@
+{
+  "version_especificacion": "0.1",
+  "descripcion": "Cobertura declarada por arnés; las expectativas del catálogo permanecen separadas de los informes de ejecución.",
+  "arneses": [
+    {
+      "comando": "python herramientas/probar_d0.py",
+      "casos": [
+        "CF01",
+        "CF02",
+        "CF02-negativo",
+        "CF06"
+      ],
+      "alcance": "Manifiesto D0 con valores, metadatos y rechazo D05."
+    }
+  ],
+  "bateria_completa_ejecutada": false,
+  "otros_casos": "Las pruebas de fase y de integración están en pruebas/parser y pruebas/ejecucion; no se extrapolan a aprobación global CF."
+}
