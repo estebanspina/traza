@@ -1,0 +1,1071 @@
+{
+  "version_esquema": "0.1",
+  "reglas": [
+    {
+      "id": "S01",
+      "titulo": "Valores generales",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S02",
+      "titulo": "Vinculaciones inmutables",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S03",
+      "titulo": "Evaluación estricta y orden",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF11",
+        "CF14"
+      ]
+    },
+    {
+      "id": "S04",
+      "titulo": "Evaluación condicional",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF13",
+        "CF15"
+      ]
+    },
+    {
+      "id": "S05",
+      "titulo": "Sin conversiones implícitas entre categorías",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF38"
+      ]
+    },
+    {
+      "id": "S06",
+      "titulo": "Funciones y entorno léxico",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S07",
+      "titulo": "Entradas y resultados",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF08"
+      ]
+    },
+    {
+      "id": "S08",
+      "titulo": "Pureza",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S09",
+      "titulo": "Control por variantes",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S10",
+      "titulo": "Recursión y diferimiento",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF13"
+      ]
+    },
+    {
+      "id": "S11",
+      "titulo": "Tipo base y condición",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S12",
+      "titulo": "Comprobación estática y dinámica",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF01",
+        "CF02",
+        "CF06"
+      ]
+    },
+    {
+      "id": "S13",
+      "titulo": "Predicados iniciales",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S14",
+      "titulo": "Garantías vinculadas al valor",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S15",
+      "titulo": "Transformaciones",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF09"
+      ]
+    },
+    {
+      "id": "S16",
+      "titulo": "Composición",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF03"
+      ]
+    },
+    {
+      "id": "S17",
+      "titulo": "Fronteras y vigencia",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S18",
+      "titulo": "Fallos representados",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF04"
+      ]
+    },
+    {
+      "id": "S19",
+      "titulo": "Fallos del proceso",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": [
+        "CF14"
+      ]
+    },
+    {
+      "id": "S20",
+      "titulo": "Operaciones numéricas",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S21",
+      "titulo": "Efectos y capacidades",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S22",
+      "titulo": "Esquemas externos",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S23",
+      "titulo": "Observaciones y optimización",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "S24",
+      "titulo": "Ejecución del programa",
+      "documento": "documentacion/especificaciones/01-semantica-minima.md",
+      "paquete": "PI14",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T01",
+      "titulo": "Catálogo conceptual",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T02",
+      "titulo": "Registros estructurales",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T03",
+      "titulo": "Colecciones y variantes",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T04",
+      "titulo": "Ausencia y categorías incompatibles",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF39"
+      ]
+    },
+    {
+      "id": "T05",
+      "titulo": "Inferencia local",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T06",
+      "titulo": "Parámetros de tipo",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T07",
+      "titulo": "Inferencia de condiciones",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T08",
+      "titulo": "Funciones recursivas",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T09",
+      "titulo": "Restricción sobre el tipo base",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF10"
+      ]
+    },
+    {
+      "id": "T10",
+      "titulo": "Referencias a parámetros",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T11",
+      "titulo": "Requisitos de entrada",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF08"
+      ]
+    },
+    {
+      "id": "T12",
+      "titulo": "Contratos verificables",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF40"
+      ]
+    },
+    {
+      "id": "T13",
+      "titulo": "Subconjunto inicial de predicados",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T14",
+      "titulo": "Evidencia disponible",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T15",
+      "titulo": "Procedimiento inicial",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T16",
+      "titulo": "Conservación de exactitud lógica",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T17",
+      "titulo": "Compatibilidad de valores",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF03"
+      ]
+    },
+    {
+      "id": "T18",
+      "titulo": "Composición directa y comprobación explícita",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF03",
+        "CF05"
+      ]
+    },
+    {
+      "id": "T19",
+      "titulo": "Colecciones registros y variantes",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T20",
+      "titulo": "Funciones como valores",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T21",
+      "titulo": "Retorno demostrado o refutado",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF06",
+        "CF10"
+      ]
+    },
+    {
+      "id": "T22",
+      "titulo": "Retorno desconocido",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF01",
+        "CF02",
+        "CF07"
+      ]
+    },
+    {
+      "id": "T23",
+      "titulo": "Estructura general de error",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF02"
+      ]
+    },
+    {
+      "id": "T24",
+      "titulo": "Propagación explícita",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF04",
+        "CF11",
+        "CF12"
+      ]
+    },
+    {
+      "id": "T25",
+      "titulo": "Evidencia en patrones y ramas",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T26",
+      "titulo": "Transformación e inmutabilidad",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF09"
+      ]
+    },
+    {
+      "id": "T27",
+      "titulo": "Contratos entre módulos",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "T28",
+      "titulo": "Efectos y recursos",
+      "documento": "documentacion/especificaciones/02-tipos-contratos.md",
+      "paquete": "PI11",
+      "estado": "pendiente",
+      "casos": [
+        "CF40"
+      ]
+    },
+    {
+      "id": "N01",
+      "titulo": "Valor de Number",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N02",
+      "titulo": "Igualdad y normalización",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF17",
+        "CF31"
+      ]
+    },
+    {
+      "id": "N03",
+      "titulo": "Literales exactos",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF16"
+      ]
+    },
+    {
+      "id": "N04",
+      "titulo": "Finitud y propiedades generales",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N05",
+      "titulo": "Suma resta y negación",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF16"
+      ]
+    },
+    {
+      "id": "N06",
+      "titulo": "Multiplicación y precisión intermedia",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF18"
+      ]
+    },
+    {
+      "id": "N07",
+      "titulo": "Orden e igualdad",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF17"
+      ]
+    },
+    {
+      "id": "N08",
+      "titulo": "Operaciones incorporadas y firmas",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N09",
+      "titulo": "Cociente decimal exacto",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF19",
+        "CF20",
+        "CF21"
+      ]
+    },
+    {
+      "id": "N10",
+      "titulo": "Cociente redondeado",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF22",
+        "CF23"
+      ]
+    },
+    {
+      "id": "N11",
+      "titulo": "División y resto enteros",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF28"
+      ]
+    },
+    {
+      "id": "N12",
+      "titulo": "División en la sintaxis",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N13",
+      "titulo": "Escala de operación",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF29"
+      ]
+    },
+    {
+      "id": "N14",
+      "titulo": "Modos admitidos",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF22",
+        "CF23",
+        "CF24",
+        "CF25",
+        "CF26",
+        "CF35"
+      ]
+    },
+    {
+      "id": "N15",
+      "titulo": "Cuantización",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF24",
+        "CF25",
+        "CF26",
+        "CF27",
+        "CF35"
+      ]
+    },
+    {
+      "id": "N16",
+      "titulo": "Propiedades del resultado",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF27",
+        "CF35"
+      ]
+    },
+    {
+      "id": "N17",
+      "titulo": "Precisión general",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N18",
+      "titulo": "Fronteras decimales acotadas",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF33"
+      ]
+    },
+    {
+      "id": "N19",
+      "titulo": "Conversión al destino",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF33"
+      ]
+    },
+    {
+      "id": "N20",
+      "titulo": "Enteros de tamaño fijo",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF33"
+      ]
+    },
+    {
+      "id": "N21",
+      "titulo": "Condiciones numéricas comprobables",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N22",
+      "titulo": "Fallos numéricos generales",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF20",
+        "CF21",
+        "CF29"
+      ]
+    },
+    {
+      "id": "N23",
+      "titulo": "Exactitud y contratos de retorno",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N24",
+      "titulo": "Conversión desde texto",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF30",
+        "CF34"
+      ]
+    },
+    {
+      "id": "N25",
+      "titulo": "Salida canónica",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF31",
+        "CF34"
+      ]
+    },
+    {
+      "id": "N26",
+      "titulo": "Presentación a escala fija",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF32"
+      ]
+    },
+    {
+      "id": "N27",
+      "titulo": "Binario y memoria externa",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N28",
+      "titulo": "Referencia y especializaciones",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N29",
+      "titulo": "Recursos y límites",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "N30",
+      "titulo": "Optimización y orden",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF36"
+      ]
+    },
+    {
+      "id": "N31",
+      "titulo": "Políticas de negocio explícitas",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": [
+        "CF36"
+      ]
+    },
+    {
+      "id": "N32",
+      "titulo": "Decisiones para revisión",
+      "documento": "documentacion/especificaciones/03-modelo-numerico.md",
+      "paquete": "PI15",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G01",
+      "titulo": "Codificación y posiciones",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI03",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G02",
+      "titulo": "Identificadores y palabras reservadas",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI03",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G03",
+      "titulo": "Espacios comentarios y tokens",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI03",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G04",
+      "titulo": "Números",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI03",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G05",
+      "titulo": "Texto y bytes",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI03",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G06",
+      "titulo": "Unidad de programa",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G07",
+      "titulo": "Resolución de nombres",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G08",
+      "titulo": "Funciones y clausuras",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G09",
+      "titulo": "Bloques y vinculaciones",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF37"
+      ]
+    },
+    {
+      "id": "G10",
+      "titulo": "Tipos generales y genéricos",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G11",
+      "titulo": "Registros y alias",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G12",
+      "titulo": "Variantes y funciones como tipos",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G13",
+      "titulo": "Contratos delimitados",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF01"
+      ]
+    },
+    {
+      "id": "G14",
+      "titulo": "Efectos",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G15",
+      "titulo": "Orden de precedencia",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF15",
+        "CF37"
+      ]
+    },
+    {
+      "id": "G16",
+      "titulo": "Aritmética y división",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF38"
+      ]
+    },
+    {
+      "id": "G17",
+      "titulo": "Condicionales",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF13",
+        "CF37"
+      ]
+    },
+    {
+      "id": "G18",
+      "titulo": "Llamadas y estructuras",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G19",
+      "titulo": "Selección de variantes",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G20",
+      "titulo": "Exhaustividad y superposición",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF39"
+      ]
+    },
+    {
+      "id": "G21",
+      "titulo": "Propagación explícita",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF04",
+        "CF12",
+        "CF39"
+      ]
+    },
+    {
+      "id": "G22",
+      "titulo": "Comprobación de condiciones",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF05"
+      ]
+    },
+    {
+      "id": "G23",
+      "titulo": "Convenciones EBNF",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF37"
+      ]
+    },
+    {
+      "id": "G24",
+      "titulo": "Separación de análisis y significado",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G25",
+      "titulo": "Resolución de ambigüedades",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G26",
+      "titulo": "Predicados admitidos",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": [
+        "CF40"
+      ]
+    },
+    {
+      "id": "G27",
+      "titulo": "Construcciones predefinidas",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G28",
+      "titulo": "Validación y reutilización",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G29",
+      "titulo": "Cuantización explícita",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G30",
+      "titulo": "Alias y funciones como valores",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G31",
+      "titulo": "Categorías de diagnóstico",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    },
+    {
+      "id": "G32",
+      "titulo": "Alcance de la notación propuesta",
+      "documento": "documentacion/especificaciones/04-sintaxis-gramatica.md",
+      "paquete": "PI04",
+      "estado": "pendiente",
+      "casos": []
+    }
+  ]
+}

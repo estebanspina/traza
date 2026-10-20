@@ -1,0 +1,2 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn bad_effect(x: Number) -> Result<Number where {read_bytes("dato") == Result::Ok(b"")}, Error> { Result::Ok(x) }

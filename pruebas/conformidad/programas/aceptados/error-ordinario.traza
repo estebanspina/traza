@@ -1,0 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn failed() -> Result<Number where {value >= 0}, Error> {
+ Result::Err(Error::InvalidInput)
+}

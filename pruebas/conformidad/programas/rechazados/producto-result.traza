@@ -1,0 +1,2 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn invalid_product(a: Number, b: Number) -> Number { a / b * 2 }

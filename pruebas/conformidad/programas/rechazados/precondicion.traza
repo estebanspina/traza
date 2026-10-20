@@ -1,0 +1,3 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+fn consume(x: Number where {value >= 0}) -> Number { x }
+pub fn caller(x: Number) -> Number { consume(x) }

@@ -1,5 +1,5 @@
 # Código del prototipo
 
-El paquete traza existe como base; no contiene un intérprete. Crear componentes cuando se implementen: analisis, resolucion, tipos, contratos, elaboracion, nucleo, ejecucion, numeros, capacidades, diagnosticos e interfaz.
+traza/analisis implementa la fase léxica inicial con datos inmutables, UTF-8 estricto, posiciones, tokens y diagnósticos. traza/__main__.py ofrece sólo el comando experimental tokens.
 
-Mantener las fronteras del documento 06. El código del anfitrión usa tipos internos explícitos y no ejecuta texto de Traza mediante eval o exec.
+No hay parser, resolución, tipos, contratos ejecutables ni runtime. Mantener las fronteras del documento 06; no ejecutar texto Traza mediante eval o exec. Crear los demás componentes cuando se implementen.

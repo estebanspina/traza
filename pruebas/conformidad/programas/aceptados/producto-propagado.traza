@@ -1,0 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn valid_product(a: Number, b: Number) -> Result<Number, Error> {
+ Result::Ok((a / b)? * 2)
+}

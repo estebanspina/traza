@@ -6,7 +6,7 @@ Lenguaje funcional en diseño con respuestas verificadas, aritmética decimal ex
 
 ## Estado
 
-Este repositorio contiene la base documental, la estructura de desarrollo y los primeros fixtures de conformidad. **Todavía no hay lexer, comprobador, intérprete ni compilador ejecutable de Traza.** Los programas de ejemplo describen resultados esperados; no son pruebas del lenguaje ya aprobadas.
+PI01–PI02 completan la base reproducible y la preparación del catálogo: 116 reglas y 40 casos CF con sus variantes. Hay una primera implementación del **analizador léxico**, con tokens y diagnósticos. Todavía no hay parser, comprobador, intérprete ni compilador de Traza. Los casos semánticos permanecen pendientes.
 
 ## Principios
 
@@ -25,28 +25,28 @@ Los ocho documentos PDF existentes se incorporan como transcripciones textuales 
 
 ## Preparación del desarrollo
 
-Requisito del entorno inicial: Python 3.12. No se necesita instalar dependencias externas para comprobar esta base.
+Referencia reproducible: CPython 3.12.12, fijado en `.python-version`. No se necesitan dependencias externas. Ver [entorno de desarrollo](documentacion/desarrollo.md).
 
 ```sh
 python --version
-python -m unittest discover -s pruebas/infraestructura -v
-python -m compileall -q fuente pruebas
+python herramientas/verificar.py
+python herramientas/traza.py tokens ejemplos/contratos/bounded.traza
 ```
 
-Estas comprobaciones verifican manifiestos e integridad documental; **no ejecutan Traza**. Los fixtures permanecen con estado pendiente. No existe todavía un comando `traza ejecutar` o `traza verificar`.
+Las pruebas comprueban infraestructura, catálogo, análisis léxico e interfaz; **no ejecutan Traza**. El comando `tokens` produce JSON y no implica aceptación sintáctica. No existe todavía un comando `traza ejecutar` o `traza verificar`. Consultar [el lexer](documentacion/analizador-lexico.md) y [el catálogo](documentacion/conformidad/catalogo.md).
 
 ## Organización
 
 | Ruta | Contenido |
 | --- | --- |
 | documentacion/ | Especificaciones, decisiones y planificación. |
-| fuente/traza/ | Paquete reservado para el prototipo de referencia. |
+| fuente/traza/ | Analizador léxico e interfaz del prototipo. |
 | pruebas/ | Infraestructura y futuros casos ejecutables del lenguaje. |
 | ejemplos/ | Programas de diseño con resultados esperados. |
 | herramientas/ | Automatizaciones de desarrollo cuando se incorporen. |
 | mediciones/ | Escenarios futuros de tiempo y memoria. |
 
-Primer objetivo: PI01–PI02 y después la demostración D0, con `bounded(50)` exitoso y valores fuera de rango rechazados mediante ContractViolation.
+Siguiente objetivo: completar la integración de PI03, comenzar el parser PI04 y avanzar hacia D0, donde `bounded(50)` deberá producir éxito y los valores fuera de rango deberán producir ContractViolation.
 
 ## Contribuciones y licencia
 

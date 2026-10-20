@@ -1,0 +1,2 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn incomplete(x: Option<Number>) -> Number { match (x) { Option::Some(n) => { n } } }

@@ -1,13 +1,13 @@
 [project]
 name = "traza-lang"
-version = "0.0.0"
-description = "Base de desarrollo del prototipo del lenguaje Traza"
+version = "0.0.1"
+description = "Prototipo de referencia del lenguaje Traza"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<3.13"
 license = "GPL-3.0-or-later"
 
 [tool.traza]
-estado = "preparacion"
+estado = "desarrollo"
 version-especificacion = "0.1"
 raiz-fuentes = "fuente"
 raiz-pruebas = "pruebas"

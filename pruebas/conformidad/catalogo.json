@@ -1,0 +1,1473 @@
+{
+  "version_esquema": "0.1",
+  "version_especificacion": "0.1",
+  "alcance": "Catálogo CF01–CF40; expectativas no ejecutadas",
+  "casos": [
+    {
+      "id": "CF01",
+      "titulo": "Retorno desconocido válido",
+      "reglas": [
+        "S12",
+        "T22",
+        "G13"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "dentro",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "50"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "50"
+            }
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/bounded.traza",
+      "entrada": "bounded"
+    },
+    {
+      "id": "CF02",
+      "titulo": "Retorno desconocido fuera de rango",
+      "reglas": [
+        "S12",
+        "T22",
+        "T23"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "inferior",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "-1"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "ContractViolation",
+            "campos_requeridos": [
+              "condition_id",
+              "location",
+              "boundary"
+            ]
+          }
+        },
+        {
+          "nombre": "superior",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "101"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "ContractViolation",
+            "campos_requeridos": [
+              "condition_id",
+              "location",
+              "boundary"
+            ]
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/bounded.traza",
+      "entrada": "bounded"
+    },
+    {
+      "id": "CF03",
+      "titulo": "Composición con precondición más débil",
+      "reglas": [
+        "S16",
+        "T17",
+        "T18"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "válido",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "25"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "50"
+            }
+          },
+          "evidencia": [
+            "implicacion_demostrada_para_double"
+          ]
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/pipeline.traza",
+      "entrada": "pipeline"
+    },
+    {
+      "id": "CF04",
+      "titulo": "Propagación evita ejecutar consumidor",
+      "reglas": [
+        "S18",
+        "T24",
+        "G21"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "inválido",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "101"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "ContractViolation",
+            "campos_requeridos": [
+              "condition_id",
+              "location",
+              "boundary"
+            ]
+          },
+          "evidencia": [
+            "double_no_invocada"
+          ]
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/pipeline.traza",
+      "entrada": "pipeline"
+    },
+    {
+      "id": "CF05",
+      "titulo": "Garantía más fuerte explícita",
+      "reglas": [
+        "T18",
+        "G22"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "válido",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "49"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "49"
+            }
+          }
+        },
+        {
+          "nombre": "límite",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "50"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "ContractViolation",
+            "campos_requeridos": [
+              "condition_id",
+              "location",
+              "boundary"
+            ]
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/below-fifty.traza",
+      "entrada": "below_fifty"
+    },
+    {
+      "id": "CF06",
+      "titulo": "Éxito refutado",
+      "reglas": [
+        "T21",
+        "S12"
+      ],
+      "fase_esperada": "comprobacion_estatica",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "constante",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D05"
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/rechazados/retorno-imposible.traza"
+    },
+    {
+      "id": "CF07",
+      "titulo": "Retorno desconocido sin canal",
+      "reglas": [
+        "T22"
+      ],
+      "fase_esperada": "comprobacion_estatica",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "sin_result",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D06"
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/rechazados/retorno-sin-canal.traza"
+    },
+    {
+      "id": "CF08",
+      "titulo": "Entrada sin prueba",
+      "reglas": [
+        "T11",
+        "S07"
+      ],
+      "fase_esperada": "comprobacion_estatica",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "sin_prueba",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D04"
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/rechazados/precondicion.traza"
+    },
+    {
+      "id": "CF09",
+      "titulo": "Transformación pierde garantía",
+      "reglas": [
+        "T26",
+        "S15"
+      ],
+      "fase_esperada": "comprobacion_estatica",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "resta",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D04"
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/rechazados/transformacion.traza"
+    },
+    {
+      "id": "CF10",
+      "titulo": "No refinar Err",
+      "reglas": [
+        "T21",
+        "T09"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "error",
+          "argumentos": [],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InvalidInput"
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/error-ordinario.traza",
+      "entrada": "failed"
+    },
+    {
+      "id": "CF11",
+      "titulo": "Err no corta argumentos",
+      "reglas": [
+        "S03",
+        "T24"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "orden",
+          "argumentos": [],
+          "esperado": {
+            "tipo": "Number",
+            "valor": "2"
+          },
+          "evidencia": [
+            "first",
+            "second",
+            "take"
+          ]
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/orden.traza",
+      "entrada": "ordinary_error"
+    },
+    {
+      "id": "CF12",
+      "titulo": "Propagación explícita",
+      "reglas": [
+        "T24",
+        "G21"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "propaga",
+          "argumentos": [],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InvalidInput"
+          },
+          "evidencia": [
+            "second_no_invocada"
+          ]
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/orden.traza",
+      "entrada": "propagated"
+    },
+    {
+      "id": "CF13",
+      "titulo": "Rama descartada",
+      "reglas": [
+        "S04",
+        "S10",
+        "G17"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "selección",
+          "argumentos": [],
+          "esperado": {
+            "tipo": "Number",
+            "valor": "7"
+          },
+          "evidencia": [
+            "forever_no_invocada"
+          ]
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/ramas.traza",
+      "entrada": "selected"
+    },
+    {
+      "id": "CF14",
+      "titulo": "Fallo fatal corta argumentos",
+      "reglas": [
+        "S03",
+        "S19"
+      ],
+      "fase_esperada": "proceso",
+      "modalidad": "protocolo",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "sonda",
+          "argumentos": [],
+          "esperado": {
+            "estado_proceso": "fallo_fatal",
+            "no_invocada": "second"
+          }
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/orden.traza",
+      "entrada": "ordinary_error",
+      "protocolo": {
+        "sonda": "abortar_al_entrar",
+        "funcion": "first",
+        "aislamiento": "proceso_separado",
+        "no_es_intrinseco_publico": true
+      }
+    },
+    {
+      "id": "CF15",
+      "titulo": "Cortocircuito booleano",
+      "reglas": [
+        "S04",
+        "G15"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "and",
+          "argumentos": [],
+          "esperado": {
+            "tipo": "Boolean",
+            "valor": false
+          },
+          "entrada": "and_short",
+          "evidencia": [
+            "forever_no_invocada"
+          ]
+        },
+        {
+          "nombre": "or",
+          "argumentos": [],
+          "esperado": {
+            "tipo": "Boolean",
+            "valor": true
+          },
+          "entrada": "or_short",
+          "evidencia": [
+            "forever_no_invocada"
+          ]
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/aceptados/ramas.traza"
+    },
+    {
+      "id": "CF16",
+      "titulo": "Suma decimal",
+      "reglas": [
+        "N03",
+        "N05"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "0.1"
+            },
+            {
+              "tipo": "Number",
+              "valor": "0.2"
+            }
+          ],
+          "esperado": {
+            "tipo": "Number",
+            "valor": "0.3"
+          }
+        }
+      ],
+      "operacion": "add"
+    },
+    {
+      "id": "CF17",
+      "titulo": "Igualdad numérica",
+      "reglas": [
+        "N02",
+        "N07"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1"
+            },
+            {
+              "tipo": "Number",
+              "valor": "1.00"
+            }
+          ],
+          "esperado": {
+            "tipo": "Boolean",
+            "valor": true
+          }
+        }
+      ],
+      "operacion": "equals"
+    },
+    {
+      "id": "CF18",
+      "titulo": "Producto exacto",
+      "reglas": [
+        "N06"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "125.50"
+            },
+            {
+              "tipo": "Number",
+              "valor": "0.015"
+            }
+          ],
+          "esperado": {
+            "tipo": "Number",
+            "valor": "1.8825"
+          }
+        }
+      ],
+      "operacion": "multiply"
+    },
+    {
+      "id": "CF19",
+      "titulo": "División terminante",
+      "reglas": [
+        "N09"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1"
+            },
+            {
+              "tipo": "Number",
+              "valor": "8"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "0.125"
+            }
+          }
+        }
+      ],
+      "operacion": "divide_exact"
+    },
+    {
+      "id": "CF20",
+      "titulo": "División no terminante",
+      "reglas": [
+        "N09",
+        "N22"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1"
+            },
+            {
+              "tipo": "Number",
+              "valor": "3"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InexactResult"
+          }
+        }
+      ],
+      "operacion": "divide_exact"
+    },
+    {
+      "id": "CF21",
+      "titulo": "Divisor cero",
+      "reglas": [
+        "N09",
+        "N22"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "0"
+            },
+            {
+              "tipo": "Number",
+              "valor": "0"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "DivisionByZero"
+          }
+        }
+      ],
+      "operacion": "divide_exact"
+    },
+    {
+      "id": "CF22",
+      "titulo": "División redondeada",
+      "reglas": [
+        "N10",
+        "N14"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1"
+            },
+            {
+              "tipo": "Number",
+              "valor": "3"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "HalfEven"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "0.33"
+            }
+          }
+        }
+      ],
+      "operacion": "divide_round"
+    },
+    {
+      "id": "CF23",
+      "titulo": "Redondeo negativo dirigido",
+      "reglas": [
+        "N10",
+        "N14"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "-1"
+            },
+            {
+              "tipo": "Number",
+              "valor": "3"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "TowardNegative"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "-0.34"
+            }
+          }
+        }
+      ],
+      "operacion": "divide_round"
+    },
+    {
+      "id": "CF24",
+      "titulo": "Empate al par",
+      "reglas": [
+        "N14",
+        "N15"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1.225"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "HalfEven"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "1.22"
+            }
+          }
+        },
+        {
+          "nombre": "negativo",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "-1.225"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "HalfEven"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "-1.22"
+            }
+          }
+        }
+      ],
+      "operacion": "quantize"
+    },
+    {
+      "id": "CF25",
+      "titulo": "Empate alejándose de cero",
+      "reglas": [
+        "N14",
+        "N15"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "-1.225"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "HalfAwayFromZero"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "-1.23"
+            }
+          }
+        },
+        {
+          "nombre": "positivo",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1.225"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "HalfAwayFromZero"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "1.23"
+            }
+          }
+        }
+      ],
+      "operacion": "quantize"
+    },
+    {
+      "id": "CF26",
+      "titulo": "Modo exacto falla",
+      "reglas": [
+        "N14",
+        "N15"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1.225"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "Exact"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InexactResult"
+          }
+        }
+      ],
+      "operacion": "quantize"
+    },
+    {
+      "id": "CF27",
+      "titulo": "Cuantización conserva valor",
+      "reglas": [
+        "N15",
+        "N16"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1.2"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "Exact"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Number",
+              "valor": "1.2"
+            }
+          }
+        }
+      ],
+      "operacion": "quantize"
+    },
+    {
+      "id": "CF28",
+      "titulo": "División y resto enteros",
+      "reglas": [
+        "N11"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "-7"
+            },
+            {
+              "tipo": "Number",
+              "valor": "3"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Registro",
+              "campos": {
+                "quotient": {
+                  "tipo": "Number",
+                  "valor": "-2"
+                },
+                "remainder": {
+                  "tipo": "Number",
+                  "valor": "-1"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "operacion": "divmod"
+    },
+    {
+      "id": "CF29",
+      "titulo": "Escala inválida en API validante",
+      "reglas": [
+        "N13",
+        "N22"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "principal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1.2"
+            },
+            {
+              "tipo": "Number",
+              "valor": "-1"
+            },
+            {
+              "tipo": "Rounding",
+              "variante": "HalfEven"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InvalidScale"
+          }
+        }
+      ],
+      "operacion": "quantize",
+      "interfaz": "validante"
+    },
+    {
+      "id": "CF30",
+      "titulo": "Análisis de texto numérico",
+      "reglas": [
+        "N24"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "coma",
+          "argumentos": [
+            {
+              "tipo": "Text",
+              "valor": "1,25"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InvalidNumericText"
+          }
+        },
+        {
+          "nombre": "nan",
+          "argumentos": [
+            {
+              "tipo": "Text",
+              "valor": "NaN"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InvalidNumericText"
+          }
+        }
+      ],
+      "operacion": "parse_number"
+    },
+    {
+      "id": "CF31",
+      "titulo": "Serialización canónica",
+      "reglas": [
+        "N02",
+        "N25"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "escala",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "12.30"
+            }
+          ],
+          "esperado": {
+            "tipo": "Text",
+            "valor": "123e-1"
+          }
+        },
+        {
+          "nombre": "cero",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "-0"
+            }
+          ],
+          "esperado": {
+            "tipo": "Text",
+            "valor": "0e0"
+          }
+        }
+      ],
+      "operacion": "canonical"
+    },
+    {
+      "id": "CF32",
+      "titulo": "Formateo sin redondeo",
+      "reglas": [
+        "N26"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "vector",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "válido",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1.2"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            }
+          ],
+          "esperado": {
+            "variante": "Ok",
+            "valor": {
+              "tipo": "Text",
+              "valor": "1.20"
+            }
+          }
+        },
+        {
+          "nombre": "inexacto",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1.225"
+            },
+            {
+              "tipo": "Number",
+              "valor": "2"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "InexactResult"
+          }
+        }
+      ],
+      "operacion": "format_fixed"
+    },
+    {
+      "id": "CF33",
+      "titulo": "Representación acotada",
+      "reglas": [
+        "N18",
+        "N19",
+        "N20"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "protocolo",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "decimal",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "1000"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "NotRepresentable"
+          },
+          "destino": {
+            "clase": "decimal",
+            "precision": 5,
+            "escala": 2
+          }
+        },
+        {
+          "nombre": "entero",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "128"
+            }
+          ],
+          "esperado": {
+            "variante": "Err",
+            "codigo": "NotRepresentable"
+          },
+          "destino": {
+            "clase": "entero",
+            "ancho": 8,
+            "con_signo": true
+          }
+        }
+      ],
+      "protocolo": {
+        "operacion": "conversion_exacta",
+        "enlace_api": "pendiente_de_esquemas",
+        "criterio": "Valor fuera del rango del destino; no inventar un intrínseco."
+      }
+    },
+    {
+      "id": "CF34",
+      "titulo": "Ida y vuelta canónica",
+      "reglas": [
+        "N24",
+        "N25"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "propiedad",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "generados",
+          "argumentos": [],
+          "esperado": {
+            "propiedad": "parse(canonical(x)) == x y canonical(parse(canonical(x))) == canonical(x)"
+          }
+        }
+      ],
+      "generador": {
+        "semilla": 20261020,
+        "cantidad": 256,
+        "coeficiente_bits": [
+          0,
+          1,
+          64,
+          128,
+          256
+        ],
+        "exponentes": [
+          -20,
+          -2,
+          0,
+          2,
+          20
+        ],
+        "signos": [
+          "positivo",
+          "negativo"
+        ],
+        "incluir_cero": true
+      }
+    },
+    {
+      "id": "CF35",
+      "titulo": "Idempotencia de quantize",
+      "reglas": [
+        "N14",
+        "N15",
+        "N16"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "propiedad",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "modos_y_escalas",
+          "argumentos": [],
+          "esperado": {
+            "propiedad": "Si q(x,s,m)=Ok(y), q(y,s,m)=Ok(y); Exact preserva el error de entrada no cuantizada."
+          }
+        }
+      ],
+      "generador": {
+        "semilla": 20261021,
+        "cantidad": 256,
+        "escalas": [
+          0,
+          2,
+          8
+        ],
+        "modos": [
+          "Exact",
+          "HalfEven",
+          "HalfAwayFromZero",
+          "TowardZero",
+          "TowardPositive",
+          "TowardNegative"
+        ],
+        "incluir_valores_no_cuantizados": true
+      }
+    },
+    {
+      "id": "CF36",
+      "titulo": "No mover el redondeo",
+      "reglas": [
+        "N30",
+        "N31"
+      ],
+      "fase_esperada": "ejecucion",
+      "modalidad": "protocolo",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "dos_importes",
+          "argumentos": [
+            {
+              "tipo": "Number",
+              "valor": "0.005"
+            },
+            {
+              "tipo": "Number",
+              "valor": "0.005"
+            }
+          ],
+          "esperado": {
+            "por_registro": {
+              "variante": "Ok",
+              "valor": {
+                "tipo": "Number",
+                "valor": "0"
+              }
+            },
+            "al_total": {
+              "variante": "Ok",
+              "valor": {
+                "tipo": "Number",
+                "valor": "0.01"
+              }
+            }
+          }
+        }
+      ],
+      "protocolo": {
+        "modo": "HalfEven",
+        "escala": 2,
+        "algoritmos": [
+          "sumar cuantizaciones individuales",
+          "cuantizar suma exacta"
+        ]
+      }
+    },
+    {
+      "id": "CF37",
+      "titulo": "Rechazos sintácticos",
+      "reglas": [
+        "G09",
+        "G15",
+        "G17",
+        "G23"
+      ],
+      "fase_esperada": "analisis_sintactico",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "sin_final",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "SG03"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/cf37-sin_final.traza"
+        },
+        {
+          "nombre": "sin_else",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "SG02"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/cf37-sin_else.traza"
+        },
+        {
+          "nombre": "comparacion",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "SG04"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/cf37-comparacion.traza"
+        },
+        {
+          "nombre": "coma_registro",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "SG02"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/cf37-coma_registro.traza"
+        }
+      ]
+    },
+    {
+      "id": "CF38",
+      "titulo": "Result no es Number",
+      "reglas": [
+        "G16",
+        "S05"
+      ],
+      "fase_esperada": "comprobacion_estatica",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "producto",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D01"
+          }
+        },
+        {
+          "nombre": "propagacion_compatible",
+          "argumentos": [],
+          "esperado": {
+            "aceptacion_estatica": true
+          },
+          "programa": "pruebas/conformidad/programas/aceptados/producto-propagado.traza"
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/rechazados/producto-result.traza"
+    },
+    {
+      "id": "CF39",
+      "titulo": "Patrones y ámbito de ?",
+      "reglas": [
+        "G20",
+        "G21",
+        "T04"
+      ],
+      "fase_esperada": "comprobacion_estatica",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "no_exhaustivo",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D07"
+          }
+        },
+        {
+          "nombre": "option_no_es_result",
+          "argumentos": [],
+          "esperado": {
+            "familia_diagnostico": "tipos"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/option-propagada.traza"
+        }
+      ],
+      "programa": "pruebas/conformidad/programas/rechazados/match-incompleto.traza"
+    },
+    {
+      "id": "CF40",
+      "titulo": "Efectos y predicados no autorizados",
+      "reglas": [
+        "T12",
+        "T28",
+        "G26"
+      ],
+      "fase_esperada": "comprobacion_estatica",
+      "modalidad": "programa",
+      "estado": "pendiente",
+      "variantes": [
+        {
+          "nombre": "pura_con_efecto",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D08"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/efecto-oculto.traza"
+        },
+        {
+          "nombre": "predicado_recursivo",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D03"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/predicado-recursivo.traza"
+        },
+        {
+          "nombre": "predicado_efecto",
+          "argumentos": [],
+          "esperado": {
+            "diagnostico": "D03"
+          },
+          "programa": "pruebas/conformidad/programas/rechazados/predicado-efecto.traza"
+        }
+      ],
+      "catalogo_soporte": "A17: read_bytes(Text) -> Result<Bytes, Error> !{ReadFile}"
+    }
+  ]
+}

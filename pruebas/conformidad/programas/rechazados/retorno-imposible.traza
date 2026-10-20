@@ -1,5 +1,3 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 pub fn impossible()
- -> Result<Number where {value <= 100}, Error> {
-  Result::Ok(101)
-}
+ -> Result<Number where {value <= 100}, Error> { Result::Ok(101) }

@@ -1,0 +1,10 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn bounded(x: Number)
+ -> Result<Number where {value >= 0 and value <= 100}, Error> {
+  Result::Ok(x)
+}
+fn double(x: Number where {value >= 0}) -> Number { x + x }
+pub fn pipeline(x: Number) -> Result<Number, Error> {
+ let validated = bounded(x)?;
+ Result::Ok(double(validated))
+}
