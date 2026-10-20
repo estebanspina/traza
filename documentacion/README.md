@@ -32,3 +32,10 @@ El documento 01 había previsto para 07 un registro de decisiones y para 08 una 
 - Registrar contradicciones y resolverlas explícitamente antes de habilitar capacidades afectadas.
 
 Consultar [trabajo pendiente](planificacion/trabajo-pendiente.md), [guía inicial](guia-inicial.md), [licencias](licencias.md) y [decisiones](decisiones/README.md).
+
+## Desarrollo implementado
+
+- [Entorno y verificación](desarrollo.md).
+- [Catálogo completo](conformidad/catalogo.md).
+- [Analizador léxico](analizador-lexico.md).
+- [Avance PI01–PI03](planificacion/avance-pi01-pi03.md).

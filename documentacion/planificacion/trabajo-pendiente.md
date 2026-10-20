@@ -1,6 +1,6 @@
 # Trabajo pendiente
 
-Fuente: documento 07. Esta tabla es seguimiento inicial, no certificación de paquetes terminados. PI01 está en preparación; PI02 contiene sólo un catálogo parcial para D0. No se crearon issues, hitos o proyectos remotos automáticamente.
+Fuente: documento 07. PI01 y PI02 completados como preparación del repositorio y de las expectativas, con evidencia CI enlazada en el informe de avance. PI03 iniciado: lexer, posiciones, diagnósticos y comando tokens. Los casos CF siguen pendientes de ejecución semántica. No se crearon issues, hitos o proyectos remotos automáticamente.
 
 | Paquete | Objetivo | Dependencias | Cierre |
 | --- | --- | --- | --- |
@@ -26,11 +26,10 @@ Fuente: documento 07. Esta tabla es seguimiento inicial, no certificación de pa
 | PI20 | Entrega y mediciones | PI19 | Reproducción limpia y límites publicados. |
 
 ## Siguiente incremento
-- Validar la CI de infraestructura en GitHub y revisar esta base.
-- Completar PI01 y PI02, incluido el catálogo de todos los casos y variantes.
-- Implementar PI03–05 y PI06.
+- Completar la integración de PI03 y comenzar PI04 (parser).
+- Implementar resolución PI05 y Number mínimo PI06.
 - Integrar PI07–09 para D0: bounded(50) → Ok(50), bounded(-1) y bounded(101) → Err(ContractViolation); retorno constante inválido → rechazo estático.
 - No habilitar comandos de ejecución que todavía no estén implementados.
 
 ## Deuda documental
-Normalizar las transcripciones cotejando los PDF originales y completar la matriz de reglas. El lexer auxiliar previo no se incluye ni se presenta como frontend completo.
+Normalizar las transcripciones cotejando los PDF originales y ampliar las pruebas directas de las reglas aún sin caso específico. El lexer auxiliar previo no se incluye ni se presenta como frontend completo.

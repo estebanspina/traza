@@ -1,12 +1,16 @@
 # Pruebas
 
+```sh
+python herramientas/verificar.py
+```
+
 ## Infraestructura
-`python -m unittest discover -s pruebas/infraestructura -v` valida los manifiestos iniciales, rutas y presencia documental. No analiza ni ejecuta Traza.
+Comprueba catálogo completo, rutas, reglas y expectativas de D0. No instala dependencias ni ejecuta programas Traza.
+
+## Léxico
+Prueba tokens, UTF-8 inválido, escapes, bytes, rangos, comentarios, máxima longitud e interfaz JSON. Los programas CF se tokenizan para validar su frontera léxica; esto no ejecuta sus expectativas.
 
 ## Conformidad
-El manifiesto d0.json contiene expectativas para CF01, CF02 y CF06 con una variante negativa de CF02. Todos están pendientes. No representa el catálogo completo CF01–CF40. El estado no cambia automáticamente por aprobar infraestructura.
+catalogo.json contiene CF01–CF40 con variantes; documentacion/conformidad/reglas.json contiene 116 reglas. d0.json mantiene el subconjunto de arranque. Todos los estados semánticos permanecen pendientes. La CI de lexer no los modifica.
 
-La extensión .traza identifica fixtures provisionales y no fija un formato de paquete o ABI.
-
-## Próximos pasos
-Implementar pruebas de fase, arnés y oráculos independientes. Agregar regresiones ante defectos concretos y conservar semillas. No copiar algoritmos del núcleo como oráculo.
+Ver el catálogo documentado y ADR 0002 para modalidades, trazabilidad y protocolos pendientes de API externa.
