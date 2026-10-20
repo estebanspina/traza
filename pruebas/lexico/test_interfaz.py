@@ -51,6 +51,6 @@ class InterfazTokens(unittest.TestCase):
         self.assertEqual(json.loads(resultado.stderr)["fase"], "herramienta")
 
     def test_no_se_ofrece_ejecucion_inexistente(self):
-        resultado = self.invocar("ejecutar", "x.traza")
+        resultado = self.invocar("compilar_nativo", "x.traza")
         self.assertEqual(resultado.returncode, 2)
         self.assertIn("invalid choice", resultado.stderr)
