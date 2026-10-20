@@ -307,7 +307,13 @@ class Comprobador:
             if op in ("and", "or"):
                 self.compatible(x, Tipo("Boolean"), a, env)
                 self.compatible(y, Tipo("Boolean"), b, env)
-                return Info(Tipo("Boolean"))
+                if op == "and":
+                    constante = (False if x.constante is False or y.constante is False
+                                 else True if x.constante is y.constante is True else None)
+                else:
+                    constante = (True if x.constante is True or y.constante is True
+                                 else False if x.constante is y.constante is False else None)
+                return Info(Tipo("Boolean"), constante=constante)
             if op in ("+", "-", "*", "<", "<=", ">", ">="):
                 self.compatible(x, Tipo("Number"), a, env)
                 self.compatible(y, Tipo("Number"), b, env)

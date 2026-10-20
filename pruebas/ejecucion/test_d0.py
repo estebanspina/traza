@@ -186,3 +186,11 @@ pub fn main() -> Result<Number, Error> {pass(fail(1))}"""
             with self.subTest(fuente=fuente):
                 v, _ = self.correr(fuente, argumentos=argumentos)
                 self.assertEqual(serializar(v)["valor"]["valor"], "50")
+
+    def test_conectores_constantes_descartan_ramas_imposibles(self):
+        for condicion in ("true and true", "false or true", "not false"):
+            fuente = ("pub fn main() -> Result<Number where {value <= 100}, Error> {"
+                      "if (" + condicion + ") {Result::Ok(50)} else {Result::Ok(101)}}")
+            with self.subTest(condicion=condicion):
+                v, _ = self.correr(fuente)
+                self.assertEqual(serializar(v)["valor"]["valor"], "50")
