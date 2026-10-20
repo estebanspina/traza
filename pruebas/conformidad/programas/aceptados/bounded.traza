@@ -1,0 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn bounded(x: Number)
+ -> Result<Number where {value >= 0 and value <= 100}, Error> {
+  Result::Ok(x)
+}

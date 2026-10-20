@@ -1,0 +1,22 @@
+name: Propuesta de lenguaje
+description: Proponer un cambio con alternativas y evidencia.
+title: "[Propuesta] "
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema y ejemplo mínimo
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas, costos y compatibilidad
+    validations:
+      required: true
+  - type: textarea
+    id: pruebas
+    attributes:
+      label: Reglas, pruebas y condición de reconsideración
+    validations:
+      required: true

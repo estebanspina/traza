@@ -1,0 +1,83 @@
+{
+  "version_esquema": "0.1",
+  "version_especificacion": "0.1",
+  "alcance": "D0 parcial: expectativas; no ejecutadas",
+  "casos": [
+    {
+      "id": "CF01",
+      "programa": "pruebas/conformidad/programas/aceptados/bounded.traza",
+      "entrada": "bounded",
+      "argumentos": [
+        {
+          "tipo": "Number",
+          "valor": "50"
+        }
+      ],
+      "fase_esperada": "ejecucion",
+      "esperado": {
+        "variante": "Ok",
+        "valor": {
+          "tipo": "Number",
+          "valor": "50"
+        }
+      },
+      "estado": "pendiente"
+    },
+    {
+      "id": "CF02",
+      "programa": "pruebas/conformidad/programas/aceptados/bounded.traza",
+      "entrada": "bounded",
+      "argumentos": [
+        {
+          "tipo": "Number",
+          "valor": "101"
+        }
+      ],
+      "fase_esperada": "ejecucion",
+      "esperado": {
+        "variante": "Err",
+        "codigo": "ContractViolation",
+        "campos_requeridos": [
+          "condition_id",
+          "location",
+          "boundary"
+        ]
+      },
+      "estado": "pendiente"
+    },
+    {
+      "id": "CF02-negativo",
+      "caso_base": "CF02",
+      "programa": "pruebas/conformidad/programas/aceptados/bounded.traza",
+      "entrada": "bounded",
+      "argumentos": [
+        {
+          "tipo": "Number",
+          "valor": "-1"
+        }
+      ],
+      "fase_esperada": "ejecucion",
+      "esperado": {
+        "variante": "Err",
+        "codigo": "ContractViolation",
+        "campos_requeridos": [
+          "condition_id",
+          "location",
+          "boundary"
+        ]
+      },
+      "estado": "pendiente"
+    },
+    {
+      "id": "CF06",
+      "programa": "pruebas/conformidad/programas/rechazados/retorno-imposible.traza",
+      "entrada": "impossible",
+      "argumentos": [],
+      "fase_esperada": "comprobacion_estatica",
+      "esperado": {
+        "diagnostico": "D05"
+      },
+      "estado": "pendiente"
+    }
+  ]
+}

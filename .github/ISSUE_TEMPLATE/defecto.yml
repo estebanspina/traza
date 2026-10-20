@@ -1,0 +1,22 @@
+name: Defecto
+description: Informar un comportamiento incorrecto reproducible.
+title: "[Defecto] "
+body:
+  - type: textarea
+    id: reproduccion
+    attributes:
+      label: Pasos, programa y entrada
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Resultado esperado y regla afectada
+    validations:
+      required: true
+  - type: textarea
+    id: observado
+    attributes:
+      label: Resultado observado, versión y entorno
+    validations:
+      required: true

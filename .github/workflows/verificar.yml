@@ -1,0 +1,25 @@
+name: Verificar infraestructura
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  infraestructura:
+    name: Infraestructura; no conformidad de Traza
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Preparar Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+      - name: Validar manifiestos y documentación
+        run: python -m unittest discover -s pruebas/infraestructura -v
+      - name: Comprobar sintaxis del código anfitrión
+        run: python -m compileall -q fuente pruebas

@@ -1,0 +1,22 @@
+name: Tarea de implementación
+description: Desglosar un paquete del plan.
+title: "[PIxx] "
+body:
+  - type: input
+    id: paquete
+    attributes:
+      label: Paquete PI y dependencias
+    validations:
+      required: true
+  - type: textarea
+    id: alcance
+    attributes:
+      label: Alcance y condición de cierre
+    validations:
+      required: true
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Pruebas y evidencia requerida
+    validations:
+      required: true
