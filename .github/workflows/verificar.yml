@@ -21,3 +21,6 @@ jobs:
           python-version-file: ".python-version"
       - name: Verificar base, catálogo y fases disponibles
         run: python herramientas/verificar.py
+
+      - name: Ejecutar y reportar el manifiesto D0
+        run: python herramientas/probar_d0.py

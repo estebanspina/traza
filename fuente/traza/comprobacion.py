@@ -239,9 +239,9 @@ class Comprobador:
             elif isinstance(n, tuple):
                 for dato in n:
                     revisar(dato)
-        revisar(p)
         if validar_predicado(p, {**entorno, "value": Info(Tipo("Number"))}) != "Boolean":
             fallo(p, "D03", "El predicado debe producir Boolean.")
+        revisar(p)
 
     def compatible(self, i, t, n, entorno, retorno=False):
         if i.tipo.nombre != t.nombre:
