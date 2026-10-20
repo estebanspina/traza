@@ -78,9 +78,9 @@ python herramientas/traza.py ejecutar ejemplos/contratos/bounded.traza --entrada
 Salida 0 significa comando correcto, incluso si el programa produce Err esperado. Salida 1: error de programa o NI01; 2: uso, lectura o entrada; 3: recursos externos. No interpretar tokens o AST como aceptación de tipos.
 
 ## Evidencia disponible
-La ejecución https://github.com/estebanspina/traza/actions/runs/39465722910 del commit fdcd7b75d0440541802af36485cdda0eb4e76c02 aprobó 62 pruebas y las cuatro expectativas D0. La primera ejecución falló por clasificar una llamada arbitraria en contrato como NI01 en lugar de D03; se corrigió sin rebajar la expectativa.
+La ejecución https://github.com/estebanspina/traza/actions/runs/39466594938 del commit b0b235ac1280e69501d4ce6722c8b8b2697754a9 aprobó **64 pruebas y las cuatro expectativas D0 (4/4)**. La primera ejecución falló por clasificar una llamada arbitraria en contrato como NI01 en lugar de D03; se corrigió sin rebajar la expectativa.
 
-La rama de esta etapa es tarea/parser-ejecucion-d0. Consultar el último commit y su CI para el cierre definitivo: se agregó después una regresión de ramas demostradas imposibles y documentación. La revisión final de este archivo debe registrar esa evidencia antes de finalizar la etapa.
+Entrega de esta etapa: https://github.com/estebanspina/traza/pull/2, rama tarea/parser-ejecucion-d0. La evidencia citada incluye regresiones de ramas imposibles y conectores constantes. Las actualizaciones posteriores de cierre documental no cambian ese código. Consultar el estado de la PR y la última CI para conocer el commit de integración en main; no confundir este hash de código probado con el merge.
 
 Las expectativas del catálogo permanecen separadas de los informes. El arnés D0 no certifica los 40 casos CF. Las pruebas adicionales de composición y control tampoco acreditan soporte de match, efectos o división.
 
