@@ -315,7 +315,18 @@ class Comprobador:
                 if x.tipo.nombre != y.tipo.nombre or x.tipo.nombre not in ("Number", "Boolean", "Text", "Bytes"):
                     fallo(n, "D01", "Igualdad requiere primitivas de la misma categoría.")
             if op in ("==", "!=", "<", "<=", ">", ">="):
-                return Info(Tipo("Boolean"))
+                constante = None
+                if x.tipo.nombre == "Number":
+                    if clave(a) == clave(b):
+                        constante = op in ("==", "<=", ">=")
+                    else:
+                        izquierda = Nodo("nombre", ("value",), n.rango)
+                        derecha = Nodo("nombre", ("derecha",), n.rango)
+                        consulta = Nodo("binario", (op, izquierda, derecha), n.rango)
+                        constante = concluir(consulta, x, {"derecha": y})
+                elif x.constante is not None and y.constante is not None:
+                    constante = (x.constante == y.constante) if op == "==" else (x.constante != y.constante)
+                return Info(Tipo("Boolean"), constante=constante)
             if op == "+":
                 return Info(Tipo("Number"),
                             x.inferior + y.inferior if x.inferior is not None and y.inferior is not None else None,

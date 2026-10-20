@@ -6,7 +6,11 @@ Lenguaje funcional en diseño con respuestas verificadas, aritmética decimal ex
 
 ## Estado
 
-PI01–PI02 completan la base reproducible y la preparación del catálogo: 116 reglas y 40 casos CF con sus variantes. Hay una primera implementación del **analizador léxico**, con tokens y diagnósticos. Todavía no hay parser, comprobador, intérprete ni compilador de Traza. Los casos semánticos permanecen pendientes.
+PI01–PI02 completaron la preparación del repositorio y del catálogo de 116 reglas y 40 casos CF. Ya hay lexer, parser y **ejecución comprobada del subconjunto D0**, con funciones puras, aritmética exacta mínima y contratos de retorno.
+
+El parser reconoce la gramática propuesta; el ejecutor soporta un subconjunto explícito. No hay todavía un compilador nativo, comprobador completo, efectos ni biblioteca numérica completa. Las características pendientes se informan con NI01.
+
+Ver [parser y ejecución D0](documentacion/ejecucion-d0.md) y [CONTEXTO.md](CONTEXTO.md) para retomar el proyecto.
 
 ## Principios
 
@@ -30,23 +34,24 @@ Referencia reproducible: CPython 3.12.12, fijado en `.python-version`. No se nec
 ```sh
 python --version
 python herramientas/verificar.py
-python herramientas/traza.py tokens ejemplos/contratos/bounded.traza
+python herramientas/probar_d0.py
+python herramientas/traza.py ejecutar ejemplos/contratos/bounded.traza --entrada bounded --argumentos '["50"]'
 ```
 
-Las pruebas comprueban infraestructura, catálogo, análisis léxico e interfaz; **no ejecutan Traza**. El comando `tokens` produce JSON y no implica aceptación sintáctica. No existe todavía un comando `traza ejecutar` o `traza verificar`. Consultar [el lexer](documentacion/analizador-lexico.md) y [el catálogo](documentacion/conformidad/catalogo.md).
+Las pruebas distinguen infraestructura, análisis y ejecución. D0 comprueba éxitos, violaciones de contrato y rechazo estático; eso no equivale a aprobar todos los casos CF. Consultar el [catálogo](documentacion/conformidad/catalogo.md) y el informe de `probar_d0.py`.
 
 ## Organización
 
 | Ruta | Contenido |
 | --- | --- |
 | documentacion/ | Especificaciones, decisiones y planificación. |
-| fuente/traza/ | Analizador léxico e interfaz del prototipo. |
+| fuente/traza/ | Lexer, parser, comprobación y ejecución del subconjunto D0. |
 | pruebas/ | Infraestructura y futuros casos ejecutables del lenguaje. |
 | ejemplos/ | Programas de diseño con resultados esperados. |
 | herramientas/ | Automatizaciones de desarrollo cuando se incorporen. |
 | mediciones/ | Escenarios futuros de tiempo y memoria. |
 
-Siguiente objetivo: completar la integración de PI03, comenzar el parser PI04 y avanzar hacia D0, donde `bounded(50)` deberá producir éxito y los valores fuera de rango deberán producir ContractViolation.
+Siguiente objetivo: ampliar resolución, comprobación y elaboración para más construcciones de la gramática, manteniendo D0 como regresión.
 
 ## Contribuciones y licencia
 

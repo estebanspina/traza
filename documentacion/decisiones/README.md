@@ -7,3 +7,5 @@ Cada decisión registra contexto, alternativas, consecuencias y estado. Las regl
 
 - [0002 · Entorno y catálogo](0002-entorno-y-catalogo.md).
 - [0003 · Frontera léxica](0003-frontera-lexica.md).
+
+- [0004 · Parser y ejecución comprobada D0](0004-parser-y-ejecucion-d0.md).

@@ -175,3 +175,14 @@ pub fn main() -> Result<Number, Error> {pass(fail(1))}"""
             with self.subTest(fuente=fuente), self.assertRaises(ErrorPrograma) as error:
                 self.programa(fuente)
             self.assertEqual(error.exception.diagnostico.codigo, "NI01")
+
+    def test_ramas_demostradas_imposibles_no_refutan_el_retorno(self):
+        fuentes = [
+            ("pub fn main() -> Result<Number where {value <= 100}, Error> {if (1 == 1) {Result::Ok(50)} else {Result::Ok(101)}}", []),
+            ("pub fn main(x: Number where {value >= 0}) -> Result<Number where {value <= 100}, Error> {if (x < 0) {Result::Ok(101)} else {Result::Ok(50)}}", ["3"]),
+            ("pub fn main(x: Number) -> Result<Number where {value <= 100}, Error> {if (x < x) {Result::Ok(101)} else {Result::Ok(50)}}", ["3"]),
+        ]
+        for fuente, argumentos in fuentes:
+            with self.subTest(fuente=fuente):
+                v, _ = self.correr(fuente, argumentos=argumentos)
+                self.assertEqual(serializar(v)["valor"]["valor"], "50")

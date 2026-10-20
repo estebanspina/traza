@@ -39,3 +39,9 @@ Consultar [trabajo pendiente](planificacion/trabajo-pendiente.md), [guía inicia
 - [Catálogo completo](conformidad/catalogo.md).
 - [Analizador léxico](analizador-lexico.md).
 - [Avance PI01–PI03](planificacion/avance-pi01-pi03.md).
+
+## Parser, ejecución y continuidad
+
+- [Parser y ejecución D0](ejecucion-d0.md).
+- [Contexto para retomar](../CONTEXTO.md).
+- [Avance del parser y D0](planificacion/avance-parser-d0.md).
