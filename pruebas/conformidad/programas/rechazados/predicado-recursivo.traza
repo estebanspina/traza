@@ -1,0 +1,3 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+fn recursive(x: Number) -> Boolean { recursive(x) }
+pub fn bad_predicate(x: Number) -> Result<Number where {recursive(value)}, Error> { Result::Ok(x) }

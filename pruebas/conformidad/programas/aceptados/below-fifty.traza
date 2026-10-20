@@ -1,0 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+pub fn below_fifty(x: Number)
+ -> Result<Number where {value < 50}, Error> {
+ let accepted = (check (x) where {value < 50})?;
+ Result::Ok(accepted)
+}

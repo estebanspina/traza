@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+fn first() -> Result<Number, Error> { Result::Err(Error::InvalidInput) }
+fn second() -> Number { 2 }
+fn take(r: Result<Number, Error>, n: Number) -> Number {
+ match (r) {
+  Result::Ok(x) => { n },
+  Result::Err(e) => { n }
+ }
+}
+pub fn ordinary_error() -> Number { take(first(), second()) }
+pub fn propagated() -> Result<Number, Error> {
+ let n = first()?;
+ Result::Ok(second() + n)
+}

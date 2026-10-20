@@ -1,0 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+fn forever() -> Number { forever() }
+pub fn selected() -> Number { if (true) { 7 } else { forever() } }
+pub fn and_short() -> Boolean { false and forever() == 0 }
+pub fn or_short() -> Boolean { true or forever() == 0 }
