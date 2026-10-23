@@ -2,7 +2,7 @@
 name = "traza-lang"
 version = "0.0.1"
 description = "Prototipo de referencia del lenguaje Traza"
-readme = "README.md"
+readme = "readme.md"
 requires-python = ">=3.12,<3.13"
 license = "GPL-3.0-or-later"
 

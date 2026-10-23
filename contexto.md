@@ -1,18 +1,20 @@
 # Contexto de continuidad · Traza
 
-Fecha de actualización: 20 de octubre de 2026.
+Fecha de actualización: 23 de octubre de 2026.
 Repositorio público: https://github.com/estebanspina/traza
 Idioma de trabajo y documentación: castellano.
 Licencia: GNU GPL versión 3 o posterior, GPL-3.0-or-later.
 
-Este documento resume decisiones y estado para retomar el trabajo sin depender del historial del chat. Leer también AGENTS.md, README.md y las especificaciones pertinentes antes de modificar código. El repositorio y sus pruebas son la fuente de estado actual; este contexto no reemplaza las reglas semánticas.
+Este documento resume decisiones y estado para retomar el trabajo sin depender del historial del chat. Leer también agents.md, readme.md y las especificaciones pertinentes antes de modificar código. El repositorio y sus pruebas son la fuente de estado actual; este contexto no reemplaza las reglas semánticas.
 
 ## Intención del usuario
 Crear un lenguaje funcional nuevo, originalmente comparando C, COBOL y Haskell con enfoque crítico y de abogado del diablo. Conservar eficiencia y control de representación, claridad de reglas y composición funcional sin trasladar todos los mecanismos de esos lenguajes.
 
 El usuario pidió tipos generales y genéricos, evitando tipos específicos de negocio salvo justificación por ciclos de reloj o memoria. Las respuestas de funciones deben tener garantías comprobadas para evitar validaciones manuales repetidas cuando sigan siendo válidas. No prometer originalidad demostrada ni costo cero.
 
-El nombre elegido es **Traza**. Identidad propuesta: «Cada resultado, con fundamento». Todo avance de desarrollo debe enviarse a GitHub. Trabajar mediante ramas, pruebas en GitHub Actions y solicitudes de cambios; integrar resultados comprobados. El usuario pidió guardar contexto al finalizar esta etapa.
+El nombre elegido es **Traza**. Identidad propuesta: «Cada resultado, con fundamento». El usuario prefiere nombres de archivos en minúsculas y la licencia en license.md, con su contenido intacto. El directorio técnico .github/ISSUE_TEMPLATE conserva el nombre requerido por GitHub.
+
+Todo avance de desarrollo debe enviarse a GitHub. Trabajar mediante ramas, pruebas en GitHub Actions y solicitudes de cambios; integrar resultados comprobados. El usuario pidió guardar contexto al finalizar esta etapa.
 
 ## Decisiones de lenguaje
 - Evaluación estricta de izquierda a derecha, valores inmutables y ámbito léxico.
@@ -28,7 +30,7 @@ El nombre elegido es **Traza**. Identidad propuesta: «Cada resultado, con funda
 - Efectos declarados y capacidades explícitas; fallos del proceso separados de errores Result.
 
 ## Base documental
-documentacion/README.md contiene el índice vigente de las ocho entregas: semántica, tipos/contratos, números, gramática, conformidad, arquitectura, implementación y evaluación/evolución.
+documentacion/readme.md contiene el índice vigente de las ocho entregas: semántica, tipos/contratos, números, gramática, conformidad, arquitectura, implementación y evaluación/evolución.
 
 Los documentos se importaron como transcripciones textuales de PDF, preservadas por página. Los binarios originales y la normalización editorial cotejada siguen pendientes. No reinterpretar tablas o código por inferencia. Contexto 1.1 y brief 1.0 se conservan como antecedentes históricos.
 

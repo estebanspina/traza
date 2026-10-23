@@ -17,4 +17,4 @@ Entrega: [PR #2](https://github.com/estebanspina/traza/pull/2). El cierre docume
 Ver ejecución-d0.md y ADR 0004. No hay soporte de ejecución de toda la gramática, backend nativo ni evaluación comparativa de rendimiento.
 
 ## Continuidad
-CONTEXTO.md en la raíz resume las decisiones del usuario, la historia, los comandos, la evidencia y los próximos pasos. La evidencia de cierre está registrada allí.
+contexto.md en la raíz resume las decisiones del usuario, la historia, los comandos, la evidencia y los próximos pasos. La evidencia de cierre está registrada allí.

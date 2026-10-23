@@ -3,6 +3,9 @@
 ## Alcance
 Estas instrucciones cubren todo el repositorio. Usar castellano para documentación, mensajes de diagnóstico y nombres internos del proyecto, conservando nombres exigidos por herramientas y palabras de la gramática. No traducir la sintaxis de Traza sin una propuesta semántica.
 
+## Nombres de archivos
+Usar nombres de archivos en minúsculas. La licencia se conserva en license.md sin modificar su texto; la documentación usa extensión .md. Mantener los nombres de directorios técnicos exigidos por herramientas, como .github/ISSUE_TEMPLATE. Actualizar enlaces, metadatos y referencias al renombrar.
+
 ## Antes de cambiar código
 Leer el README, el índice documental y las reglas pertinentes. Mantener la diferencia entre decisión del usuario, propuesta semántica, arquitectura y comportamiento implementado. Las transcripciones históricas no se reescriben silenciosamente.
 

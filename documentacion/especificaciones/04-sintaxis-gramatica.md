@@ -4,7 +4,7 @@ Estado: propuesta 0.1, anterior al nombre Traza.
 
 Transcripción textual íntegra del PDF `04-sintaxis-gramatica-inicial.pdf`. Se conservan los saltos de línea y la disposición de tablas y código en bloques de texto para evitar una conversión Markdown que cambie su significado. Pendiente de normalización editorial y cotejo con el PDF original; no se incorpora aquí el archivo PDF binario.
 
-Para el índice vigente de la serie y sus cambios, consultar [el índice documental](../README.md).
+Para el índice vigente de la serie y sus cambios, consultar [el índice documental](../readme.md).
 
 ## Página 1
 

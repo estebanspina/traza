@@ -53,7 +53,7 @@ class BaseDelRepositorio(unittest.TestCase):
             self.assertGreater(len(texto), 1000)
 
     def test_base_de_licencia(self):
-        texto = (RAIZ / "LICENSE").read_text(encoding="utf-8")
+        texto = (RAIZ / "license.md").read_text(encoding="utf-8")
         self.assertIn("GNU GENERAL PUBLIC LICENSE", texto)
         self.assertIn("Version 3, 29 June 2007", texto)
         self.assertIn("17. Interpretation of Sections 15 and 16.", texto)

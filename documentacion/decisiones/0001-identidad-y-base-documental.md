@@ -14,7 +14,7 @@ Estado: decisiones de identidad establecidas por el usuario; organización inici
 ## Base documental
 Conservar los ocho documentos entregados, el contexto y el brief mediante transcripciones identificadas. No se dispone en este cambio de los PDF binarios originales; su incorporación y el cotejo editorial siguen pendientes.
 
-El índice previsto en el documento 01 y el índice de entregas realizadas difieren en 07 y 08. El índice de documentacion/README.md describe las entregas reales. El registro de decisiones y la guía se añaden como complementos, sin sustituir retroactivamente contenido histórico.
+El índice previsto en el documento 01 y el índice de entregas realizadas difieren en 07 y 08. El índice de documentacion/readme.md describe las entregas reales. El registro de decisiones y la guía se añaden como complementos, sin sustituir retroactivamente contenido histórico.
 
 ## Consecuencias
 La CI inicial valida infraestructura. No representa conformidad del lenguaje. Las primeras tareas son PI01–PI02 y D0. No se ha decidido una excepción de runtime ni se afirma originalidad demostrada.

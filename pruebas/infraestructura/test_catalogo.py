@@ -21,7 +21,7 @@ class CatalogoDeConformidad(unittest.TestCase):
         sin_flotantes({"tipo": "Number", "valor": "123456789012345678901.23e-40"})
 
     def test_rutas_no_pueden_escapar(self):
-        for ruta in ("../README.md", "/etc/passwd", "no-existe.traza"):
+        for ruta in ("../readme.md", "/etc/passwd", "no-existe.traza"):
             with self.subTest(ruta=ruta), self.assertRaises(ValueError):
                 ruta_del_repositorio(RAIZ, ruta)
 

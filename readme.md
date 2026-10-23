@@ -10,7 +10,7 @@ PI01–PI02 completaron la preparación del repositorio y del catálogo de 116 r
 
 El parser reconoce la gramática propuesta; el ejecutor soporta un subconjunto explícito. No hay todavía un compilador nativo, comprobador completo, efectos ni biblioteca numérica completa. Las características pendientes se informan con NI01.
 
-Ver [parser y ejecución D0](documentacion/ejecucion-d0.md) y [CONTEXTO.md](CONTEXTO.md) para retomar el proyecto.
+Ver [parser y ejecución D0](documentacion/ejecucion-d0.md) y [contexto.md](contexto.md) para retomar el proyecto.
 
 ## Principios
 
@@ -23,7 +23,7 @@ Ver [parser y ejecución D0](documentacion/ejecucion-d0.md) y [CONTEXTO.md](CONT
 
 ## Documentación
 
-Consultar el [índice documental](documentacion/README.md), el [plan de implementación](documentacion/planificacion/07-plan-implementacion.md) y el [trabajo pendiente](documentacion/planificacion/trabajo-pendiente.md).
+Consultar el [índice documental](documentacion/readme.md), el [plan de implementación](documentacion/planificacion/07-plan-implementacion.md) y el [trabajo pendiente](documentacion/planificacion/trabajo-pendiente.md).
 
 Los ocho documentos PDF existentes se incorporan como transcripciones textuales identificadas. Su normalización a Markdown y la incorporación de los binarios originales quedan pendientes. No se recrean tablas o código por inferencia.
 
@@ -55,6 +55,6 @@ Siguiente objetivo: ampliar resolución, comprobación y elaboración para más 
 
 ## Contribuciones y licencia
 
-Ver [CONTRIBUIR.md](CONTRIBUIR.md) y [AGENTS.md](AGENTS.md).
+Ver [contribuir.md](contribuir.md) y [agents.md](agents.md).
 
-El código original del proyecto se distribuye bajo **GNU GPL versión 3 o posterior**, identificador `GPL-3.0-or-later`. Consultar [LICENSE](LICENSE) y la [política de licencias](documentacion/licencias.md). No se concede automáticamente una excepción para un runtime futuro.
+El código original del proyecto se distribuye bajo **GNU GPL versión 3 o posterior**, identificador `GPL-3.0-or-later`. Consultar [license.md](license.md) y la [política de licencias](documentacion/licencias.md). No se concede automáticamente una excepción para un runtime futuro.
