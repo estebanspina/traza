@@ -31,7 +31,7 @@ El documento 01 había previsto para 07 un registro de decisiones y para 08 una 
 - Mantener referencias de regla y casos C, TC, MN, GR y CF.
 - Registrar contradicciones y resolverlas explícitamente antes de habilitar capacidades afectadas.
 
-Consultar [trabajo pendiente](planificacion/trabajo-pendiente.md), [guía inicial](guia-inicial.md), [licencias](licencias.md) y [decisiones](decisiones/README.md).
+Consultar [trabajo pendiente](planificacion/trabajo-pendiente.md), [guía inicial](guia-inicial.md), [licencias](licencias.md) y [decisiones](decisiones/readme.md).
 
 ## Desarrollo implementado
 
@@ -43,5 +43,5 @@ Consultar [trabajo pendiente](planificacion/trabajo-pendiente.md), [guía inicia
 ## Parser, ejecución y continuidad
 
 - [Parser y ejecución D0](ejecucion-d0.md).
-- [Contexto para retomar](../CONTEXTO.md).
+- [Contexto para retomar](../contexto.md).
 - [Avance del parser y D0](planificacion/avance-parser-d0.md).
